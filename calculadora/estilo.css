@@ -1,0 +1,47 @@
+.painel{
+    /*borda*/
+    border: 1px solid black;
+    /*alinha texto no centro*/
+    text-align: center;
+    /*largura da div*/
+    width: 400px;
+    /*centralizar toda a div*/
+    margin: auto;
+    /*altura*/
+    height: 400px;
+    /*arredondar*/
+    border-radius: 10px ;
+    /*cor de fundo*/
+    background-color: rgb(17, 80, 80);
+    /*cor da letra*/
+    color: black;
+    /*tipo de fonte*/
+    font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+}
+
+input{
+
+    /*arredondar*/
+    border-radius: 10px;
+    /*altura*/
+    height: 30px;
+    /*largura*/
+    width: 300px;
+    /*centralizar*/
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.botao{
+    background-color: blue;
+    color: aliceblue;
+    border: nome;
+    padding: 7px;
+    font-size: 15px;
+    
+}
+#resultado{
+    font-size: 50px;
+    font-weight: bold;
+}

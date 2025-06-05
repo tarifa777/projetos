@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+.quadrado{
+    width: 200px;   /*largura*/
+    height: 200px;  /*altura*/
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    font-size: 120px;
+    color: red;
+}
+
+.painel{
+    background-color: rgba(255, 255, 255, 0.048); /*cor de fundo*/
+    width: 1000px;                        /* largura*/
+    height: 800px;                          /*altura*/
+    margin: auto;                         /*centralizar*/
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+}
+
+.jogo{
+    margin: auto;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+body{
+    background-image: url("jogo2.jpg");
+    background-size: cover;
+}
+.botao{
+    background-color: brown;
+    color: aliceblue;
+    border: nome;
+    font-size: 30px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+.texto{
+    font-size: 25px;
+    color:aliceblue;
+
+}
+#jogador1{
+    color: red;
+
+}
+#jogador2{
+    color: blue;
+}

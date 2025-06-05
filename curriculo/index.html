@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .altoContraste{
+            background-color: black !important;
+            color: yellow !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho do meu site -->
+    <header>
+        <nav class="menu">
+            <div class="celular"> &#9776 </div>
+            <ul>
+                <li> <img src="batman.jpg" alt="" width="80"> </li>
+                <li> <a href="#inicio"> Informações pessoais</a> </li>
+                <li> <a href="#endereco"> Endereço</a> </li>
+                <li> <a href="#"> Experiêcias</a> </li>
+                <li> <a href="#formacao"> Formação</a> </li>
+                <li> <a href="#redes"> Contato</a> </li>
+
+                <button onclick="mudarTamanhoFonte(1)">A+</button>
+                <button onclick="mudarTamanhoFonte(-1)">A-</button>
+                <button onclick="toggleContrast()">Contraste</button>
+                <button onclick="lerTexto()">🔊 Ler Página</button>
+                <button onclick="resetAcessibilidade()">Resetar</button>
+
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+    <h1> Eu sou o Batman!</h1>
+    <p> Aprendendo HTML! esse é um parágrafo.</p>
+    <section id="inicio">
+        <h2>Gustavo Tarifa</h2>
+        <p>programador</p>
+
+        <img id="perfil" width="400"
+            src="centro batiman.png">
+
+        <h3 class="titulo"> informações pessoais </h3>
+        <ul class="informações">
+            <li> Telefone: 4002-8922 </li>
+            <li> Email: batmanvulgogothamcity@gmail.com</li>
+        </ul>
+
+    </section>
+
+    <section id="endereco">
+        <h3 class="titulo"> Endereço </h3>
+
+        <ul class="informações">
+            <li>Av. Bartolomeu 17 </li>
+            <li>Numero: 57</li>
+            <li> Bairro: beco do batman </li>
+            <li> Complemento: batcaverna</li>
+        </ul class="informações">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.3297964212943!2d-46.68915392378863!3d-23.556595961418772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce575858b6a5b9%3A0xc5b1a9636043ff22!2sBeco%20do%20Batman!5e0!3m2!1spt-BR!2sbr!4v1747264059201!5m2!1spt-BR!2sbr"
+            width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <section id="formacao">
+        <h3 class="titulo"> Formação </h3>
+        <ul class="informações">
+            <li> academia de herois</li>
+            <li> Curso: Heroi 2.0 </li>
+            <li> salvador da pátria</li>
+        </ul>
+    </section>
+
+    <section id="redes">
+        <h3 class="titulo"> Redes Sociais</h3>
+        <ul class="informações">
+            <li> <a target="_blank"href="https://www.tripadvisor.com.br/Attraction_Review-g303451-d2411586-Reviews-Autodromo_Internacional_Ayrton_Senna-Londrina_State_of_Parana.html"> <i class="fa-solid fa-car" style="color: #143aada9;"></i> batmovel044 </a> </li>
+            <li> <a target="_blank"href="https://fontawesome.com/icons/instagram?f=classic&s=brands&pc=%238e18b9&sc=%238e18b9"> <i class="fa-brands fa-instagram" style="color: #8e18b9cc;"></i> instagram </a> </li>
+            <li> <a target="_blank" href="#"> <i class="fa-brands fa-square-facebook"></i> facebook </a> </li>
+            <li> <a target="_blank" href=""><i class="fa-brands fa-whatsapp" style="color: #139a35;"></i> whatsapp </a> </a> </li>
+            <li> <a href="sobre.html" href=""><i class="fa-solid fa-question" style="color: #e00b0b;" ></i> sobre </a> </li>
+        </ul>
+
+    </section>
+
+    <footer class="radape">
+        <p>criado por <b> Gustavo </b> (2025) </p>
+        <cite> todos os direitos reservado</cite>
+        <progress></progress>
+        <time datetime=""></time>
+        
+    </footer>
+</main>
+    <script src="script.js"></script>
+    <script>
+
+        let tamanhoFonte;
+
+        function mudarTamanhoFonte(soma){
+            //tamanho de fonte = 16 + 1
+            //tamnho de fonte = 16 + -1
+            tamanhoFonte = tamanhoFonte += soma;
+            document.body.style.fontSize = tamanhoFonte + 'px'; 
+        }
+
+        function toggleContrast(){
+            document.body.classList.toggle('altoContraste');
+            document.querySelectorAll('section').forEach(secao => {
+                secao.style.backgroundColor = 'black';
+                
+            });
+        }
+
+        function lerTexto(){
+            const texto = document.querySelector('main').innerText;
+            const discurso = new SpeechSynthesisUtterance(texto);
+            discurso.lang = 'pt-BR';
+            speechSynthesis.speak(discurso);
+        }
+
+        // Atalhos de teclado
+    document.addEventListener('keydown', function(e) {
+      if (e.altKey && e.key === '1') changeFontSize(1);
+      if (e.altKey && e.key === '2') changeFontSize(-1);
+      if (e.altKey && e.key === '3') toggleContrast();
+      if (e.altKey && e.key === '4') toggleGrayscale();
+      if (e.altKey && e.key === '5') toggleDaltonismo();
+      if (e.altKey && e.key === '6') lerTexto();
+    });
+
+    </script>
+
+</body>
+</html>

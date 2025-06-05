@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title> Jogo da velha</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="painel">
+        <h2> Jogo da Velha</h2>
+        <span class="texto" id="jogador1"></span>
+        <span class ="texto"> Vs </span>
+        <span class="texto" id="jogador2"></span>
+        
+        <table class="jogo" border="2">
+            <tr>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado" onclick="jogar(this)"></td>
+             </tr>
+        
+             <tr>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                
+            </tr>
+           
+            <tr>
+               
+                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                <td class="quadrado" onclick="jogar(this)"></td>
+                
+            </tr>
+        
+        
+        
+        
+            </table>
+            
+            <button class="botao" onclick="reiniciar()">Reiniciar</button>
+            <button class="botao" onclick="sortear()">sortear</button>
+
+            <label class="etiqueta"> nome: </label>
+            <input class="entrada" type="text" id="nome">
+            <button onclick="adicionar()"> Adicionar </button>
+            
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
