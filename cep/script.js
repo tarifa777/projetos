@@ -14,7 +14,7 @@ document.getElementById("resultado").textContent = 'CEP invalido!';
         }else{
             //se nao tiver erro
             document.getElementById("resultado").innerHTML =
-            '<strong> Cidade: </strong> '+dados.localidade
+            '<strong> Cidade: </strong> '+dados.localidade + '<br>'
             + '<strong> cep: </strong>'+ dados.cep + '<br>'
             + '<strong> logradouro: </strong>'+ dados.logradouro + '<br>'
             + '<strong> complemento: </strong>'+ dados.complemento + '<br>'
