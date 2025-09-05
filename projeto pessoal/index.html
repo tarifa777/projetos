@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ous shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GT SHOPP</h1>
+    <div id="cart">
+    
+      <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja com Carrinho</title>
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background: #007bff;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #cart-display {
+      font-size: 1.1rem;
+      background: white;
+      color: #007bff;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    #checkout-button {
+      background: #ffc107;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #checkout-button:hover {
+      background: #e0a800;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product h2 {
+      margin-top: 0;
+    }
+
+    .product button {
+      background: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .product button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🛍️ </h1>
+    <div id="cart-display">
+      🛒 Carrinho: <span id="cart-count">0</span> itens | Total: R$ <span id="cart-total">0.00</span>
+    </div>
+    <button id="checkout-button" onclick="checkout()">Finalizar Compra</button>
+  </header>
+
+  
+
+  
+
+  <script>
+    let cartCount = 0;
+    let cartTotal = 0.00;
+
+    function addToCart(price) {
+      cartCount++;
+      cartTotal += price;
+      updateCartDisplay();
+    }
+
+    function updateCartDisplay() {
+      document.getElementById('cart-count').innerText = cartCount;
+      document.getElementById('cart-total').innerText = cartTotal.toFixed(2);
+    }
+
+    function checkout() {
+      if (cartCount === 0) {
+        alert("Seu carrinho está vazio!");
+      } else {
+        alert(`Compra finalizada!\nItens: ${cartCount}\nTotal: R$ ${cartTotal.toFixed(2)}`);
+        cartCount = 0;
+        cartTotal = 0;
+        updateCartDisplay();
+      }
+    }
+    
+  </script>
+
+</body>
+</html>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="product" data-name="Camiseta" data-price="180.00">
+        <img src="camiseta.webp" alt="Camiseta">
+        <h2>Camiseta</h2>
+        <p>R$ 180,00</p>
+        <button onclick="addToCart(this)">Adicionar ao carrinho</button> 
+      </div>
+
+    
+      <div class="product" data-name="Tênis" data-price="350.00">
+        <img src="tenis.jpg" alt="Tênis" >
+        <h2>Tênis</h2>
+        <p>R$ 350,00</p>
+        <button onclick="addToCart(this)">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="product" data-name="Boné" data-price="200.00">
+    <img src="https://images.tcdn.com.br/img/img_prod/560775/bone_ous_five_panel_fili_preto_18439_2_ded88b52a42cd4271102cebe135faf0d.jpg" alt="Boné">
+    <h2>Boné</h2>
+    <p>R$ 200,00</p>
+    <button onclick="addToCart(this)">Adicionar ao carrinho</button>
+  </div>
+
+
+
+        <div class="product" data-name="Camiseta" data-price="180.00">
+        <img src="https://images.tcdn.com.br/img/img_prod/560775/camiseta_ous_k2508_azul_marinho_18433_2_248cfe3e73a430240e2761c8df9d1876.jpg" alt="Camiseta">
+        <h2>Camiseta</h2>
+        <p>R$ 180,00</p>
+        <button onclick="addToCart(this)">Adicionar ao carrinho</button> 
+      </div>
+
+    
+      <div class="product" data-name="Tênis" data-price="350.00">
+        <img src="https://cdn.awsli.com.br/287/287385/produto/317415733/350001_116_638502551246673684-tebahu29xd.jpg" alt="Tênis" >
+        <h2>Tênis</h2>
+        <p>R$ 350,00</p>
+        <button onclick="addToCart(this)">Adicionar ao carrinho</button>
+
+      </div>
+      
+    
+
+      
+  <div class="product" data-name="Boné" data-price="200.00">
+    <img src="https://cdn.vnda.com.br/1000x/matrizskate/2024/09/24/11_48_28_887_b48471a639b4d6d10fa31f067c9309eb.png?v=1727189309" alt="Boné">
+    <h2>Boné</h2>
+    <p>R$ 200,00</p>
+    <button onclick="addToCart(this)">Adicionar ao carrinho</button>
+  </div>
+
+
+  
+  
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>

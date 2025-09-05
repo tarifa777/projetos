@@ -1,0 +1,55 @@
+body{
+    background-color: green;
+    font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+    /*ativar flexbox*/
+    display: flex;
+    /*alinhar direita esquerda*/
+    justify-content: center;
+    /*alinhar cima baixo*/
+    align-items: center;
+    /*define a altura de acordo com o tamanho da tela*/
+    height: 100vh;
+}
+
+.painel{
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    /*ativar display flex*/
+    display: flex;
+    /*direção dos itens*/
+    flex-direction: column;
+    /*espaçamento interno*/
+    padding: 20px;
+    /*alinha em cima, em baixo*/
+    justify-content: center; 
+    /*alinha direita, esquerda*/
+    align-items: center;
+    /*arredondar bordas*/
+    border-radius: 20px;
+
+}
+img{
+    border-radius: 20px;
+}
+.botao{
+    background-color: green;
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    color: white;
+
+}
+#cep{
+    height: 35px;
+    text-align: center;
+}
+::placeholder{
+    color: green;
+}
+.botao:hover{
+    background-color: black;
+    transition: 1s;
+    cursor: pointer;
+    transform: scale(1.1);
+}

@@ -1,0 +1,1 @@
+ScrollReveal().reveal('.revelar', {deley: 500});
