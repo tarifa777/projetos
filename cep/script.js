@@ -10,7 +10,7 @@ function buscar(){
     .then(dados => {
         if(dados.erro){
             //se tiver erro
-document.getElementById("resultado").textContent = 'CEP invalido!';
+        document.getElementById("resultado").textContent = 'CEP invalido!';
         }else{
             //se nao tiver erro
             document.getElementById("resultado").innerHTML =
@@ -23,7 +23,7 @@ document.getElementById("resultado").textContent = 'CEP invalido!';
             + '<strong> região: </strong>'+ dados.regiao + '<br>'
         }
 
-    } ).catch(erro => alert('erro na conexão: '+ erro));
+    } ).catch(error => alert('erro na conexão: '+ error));
 
 
 }
